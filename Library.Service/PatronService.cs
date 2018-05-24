@@ -44,7 +44,7 @@ namespace Library.Service
                 .FirstOrDefault(a => a.Id == patronId)?
                 .LibraryCard.Id;
 
-            return _context.CheckoutHistories
+            return _context.CheckoutsHistories
                 .Include(a => a.LibraryCard)
                 .Include(a => a.LibraryAsset)
                 .Where(a => a.LibraryCard.Id == cardId)

@@ -100,7 +100,7 @@ namespace Library.Service
             if (checkout != null) _context.Remove(checkout);
 
             // close any existing checkout history
-            var history = _context.CheckoutHistories
+            var history = _context.CheckoutsHistories
                 .FirstOrDefault(h =>
                     h.LibraryAsset.Id == id
                     && h.CheckedIn == null);
@@ -157,7 +157,7 @@ namespace Library.Service
             if (checkout != null) _context.Remove(checkout);
 
             // close any existing checkout history
-            var history = _context.CheckoutHistories
+            var history = _context.CheckoutsHistories
                 .Include(h => h.LibraryAsset)
                 .Include(h => h.LibraryCard)
                 .FirstOrDefault(h =>
@@ -190,7 +190,7 @@ namespace Library.Service
 
         public IEnumerable<CheckoutHistory> GetCheckoutHistory(int id)
         {
-            return _context.CheckoutHistories
+            return _context.CheckoutsHistories
                 .Include(a => a.LibraryAsset)
                 .Include(a => a.LibraryCard)
                 .Where(a => a.LibraryAsset.Id == id);

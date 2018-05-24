@@ -21,7 +21,7 @@ namespace Library.Data.Models
 
         [Required] public DateTime DateOfBirth { get; set; }
 
-        public string Telephone { get; set; }
+        public string TelephoneNumber { get; set; }
         public string Gender { get; set; }
 
         [Required]

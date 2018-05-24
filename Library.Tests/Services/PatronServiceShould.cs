@@ -23,7 +23,7 @@ namespace Library.Tests.Services
                     Id = 1,
                     FirstName = "Jane",
                     LastName = "Doe",
-                    Telephone = "1234",
+                    TelephoneNumber = "1234",
                     Address = "1 Main St",
                     DateOfBirth = new DateTime(1972, 01, 23)
                 },
@@ -33,7 +33,7 @@ namespace Library.Tests.Services
                     Id = 2,
                     FirstName = "Jack",
                     LastName = "Smith",
-                    Telephone = "233-4411",
+                    TelephoneNumber = "233-4411",
                     Address = "Oak Drive",
                     DateOfBirth = new DateTime(1983, 07, 3)
                 }
@@ -151,7 +151,7 @@ namespace Library.Tests.Services
                     }
                 };
 
-                context.CheckoutHistories.AddRange(checkoutHistories);
+                context.CheckoutsHistories.AddRange(checkoutHistories);
                 context.SaveChanges();
             }
 

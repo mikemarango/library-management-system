@@ -308,7 +308,7 @@ namespace Library.Tests.Services
                     }
                 };
 
-                context.CheckoutHistories.AddRange(checkoutHistories);
+                context.CheckoutsHistories.AddRange(checkoutHistories);
                 context.SaveChanges();
             }
 
@@ -718,7 +718,7 @@ namespace Library.Tests.Services
 
             using (var context = new LibraryDbContext(options))
             {
-                context.CheckoutHistories.Add(new CheckoutHistory
+                context.CheckoutsHistories.Add(new CheckoutHistory
                 {
                     Id = 2209,
                     LibraryAsset = new Video
@@ -746,7 +746,7 @@ namespace Library.Tests.Services
                 var service = new CheckoutService(context);
                 service.CheckInItem(10);
 
-                var history = context.CheckoutHistories.Find(2209);
+                var history = context.CheckoutsHistories.Find(2209);
                 history.CheckedIn.Should().NotBeNull();
             }
         }
@@ -760,7 +760,7 @@ namespace Library.Tests.Services
 
             using (var context = new LibraryDbContext(options))
             {
-                context.CheckoutHistories.Add(new CheckoutHistory
+                context.CheckoutsHistories.Add(new CheckoutHistory
                 {
                     Id = 31,
                     LibraryAsset = new Book
@@ -784,7 +784,7 @@ namespace Library.Tests.Services
                 var service = new CheckoutService(context);
                 service.MarkFound(16);
 
-                var history = context.CheckoutHistories.Find(31);
+                var history = context.CheckoutsHistories.Find(31);
                 history.CheckedIn.Should().NotBeNull();
             }
         }

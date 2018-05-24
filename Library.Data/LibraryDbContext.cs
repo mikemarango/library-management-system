@@ -16,7 +16,7 @@ namespace Library.Data
         public virtual DbSet<Book> Books { get; set; }
         public virtual DbSet<Video> Videos { get; set; }
         public virtual DbSet<Checkout> Checkouts { get; set; }
-        public virtual DbSet<CheckoutHistory> CheckoutHistories { get; set; }
+        public virtual DbSet<CheckoutHistory> CheckoutsHistories { get; set; }
         public virtual DbSet<LibraryBranch> LibraryBranches { get; set; }
         public virtual DbSet<BranchHours> BranchHours { get; set; }
         public virtual DbSet<LibraryCard> LibraryCards { get; set; }

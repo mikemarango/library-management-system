@@ -51,7 +51,7 @@ namespace Library.Web.Controllers
                 MemberSince = patron.LibraryCard?.Created,
                 OverdueFees = patron.LibraryCard?.Fees,
                 LibraryCardId = patron.LibraryCard?.Id,
-                Telephone = string.IsNullOrEmpty(patron.Telephone) ? "No Telephone Number Provided" : patron.Telephone,
+                Telephone = string.IsNullOrEmpty(patron.TelephoneNumber) ? "No Telephone Number Provided" : patron.TelephoneNumber,
                 AssetsCheckedOut = _patronService.GetCheckouts(id).ToList(),
                 CheckoutHistory = _patronService.GetCheckoutHistory(id),
                 Holds = _patronService.GetHolds(id)
