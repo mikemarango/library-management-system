@@ -88,7 +88,7 @@ namespace Library.Tests.Controllers
             viewModel.Subject.LastName.Should().Be("No Last Name Provided");
             viewModel.Subject.Address.Should().Be("No Address Provided");
             viewModel.Subject.HomeLibrary.Should().Be("No Home Library");
-            viewModel.Subject.Telephone.Should().Be("No Telephone Number Provided");
+            viewModel.Subject.Telephone.Should().Be("No TelephoneNumber Number Provided");
         }
 
         private static IEnumerable<Patron> GetAllPatrons()
@@ -100,7 +100,7 @@ namespace Library.Tests.Controllers
                     Id = 888,
                     FirstName = "Abc Def",
                     Address = "3 Commerce St",
-                    Telephone = "123"
+                    TelephoneNumber = "123"
                 },
 
                 new Patron
@@ -108,7 +108,7 @@ namespace Library.Tests.Controllers
                     Id = 213,
                     FirstName = "Zxy Def",
                     Address = "2 Commerce St",
-                    Telephone = "23421"
+                    TelephoneNumber = "23421"
                 }
             };
         }
@@ -120,7 +120,7 @@ namespace Library.Tests.Controllers
                 Id = 888,
                 FirstName = "Abc Def",
                 LastName = "Last",
-                Telephone = "2134",
+                TelephoneNumber = "2134",
                 Address = "898 Fox Run",
                 LibraryCard = new LibraryCard()
                 {
@@ -145,7 +145,7 @@ namespace Library.Tests.Controllers
             return new Patron 
             {
                 Id = 888,
-                Telephone = "2134",
+                TelephoneNumber = "2134",
                 Address = "898 Fox Run",
                 LibraryCard = new LibraryCard()
                 {
